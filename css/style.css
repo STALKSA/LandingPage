@@ -420,20 +420,22 @@ header {
 }
 
 .parallax{
-  padding: 89px 0;
+  margin-left: 140px;
+  padding: 80px 0;
   background-image: url(../img/parallax-bg.png);
   background-color: #ffffff;
-  box-shadow: inset 0 0 0 100vw rgba(231,40,40,0.5);
+  box-shadow: inset 0 0 0 100vw rgba(178, 55, 55, 0.5);
   background-repeat: no-repeat;
 }
 
 .parallax__title{
   font-family: 'Roboto Slab';
   font-size: 30px;
-  line-height: 44px;
+  line-height: 35px;
   font-weight: 400;
   color: #ffffff;
   text-align: center;
+  padding-right: 190px;
   margin-bottom: 53px;
 }
 
@@ -447,6 +449,7 @@ header {
   color: #ffffff;
   display: block;
   margin: 0 auto;
+  margin-right: 570px;
   text-align: center;
   width: 180px;
   height: 50px;
@@ -459,6 +462,7 @@ header {
 }
 
 .links {
+  margin-left: 140px;
   padding: 100px 0;
   width: 1600px;
   height: 477px;
@@ -484,19 +488,21 @@ header {
   margin-top: 40px;
 }
 
-.links_circle-active{
-  width: 13px;
-  height: 13px;
-  border-radius: 6.5px;
-  background: red;
-  margin-right: 7px;
+.links_circle.links_circle-active {
+  background-color: rgb(233, 78, 6);
 }
+
+
 .links_circle {
-  width: 13px;
-  height: 13px;
-  border-radius: 6.5px;
-  background: grey;
-  margin-right: 7px;
+  margin-top: 30px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: gray;
+  margin-right: 5px;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
 }
 
 .links_text_subtitle{
@@ -508,6 +514,9 @@ header {
   color: #555555; 
   margin: 0 auto;
   max-width: 764px;
+
+
+  margin-top: 10px;
 }
 
 .contact {
@@ -653,9 +662,9 @@ header {
   color: #555555;
 }
 
-.contact__input:hover {
+/* .contact__input:hover {
   border: 1px solid red;
-}
+} */
 
 .contact__input-email {
   width: 350px;
@@ -841,3 +850,58 @@ header {
   height: 2px;
   background-color: white;
 }
+
+/* мод окно для формы обратн связь */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 20% auto;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  width: 400px;
+  box-shadow: 0px 0px 10px rgba(91, 78, 135, 0.3);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #ec1111;
+}
+
+#successMessage {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+    
+    .contact__input-masked {
+      background-color: #524242;
+      pointer-events: none;
+    }
+    
+    .error-message {
+      color: red;
+      font-size: 12px;
+    }
+
+

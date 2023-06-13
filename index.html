@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="jquery.mask.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -291,19 +294,26 @@
                 <div class="links_img"><img src="img/layer_33_879.png" alt=""></div>
                 <div class="links_img"><img src="img/layer_34_880.png" alt=""></div>
             </div>
+
+            
             <div>
-                <h5 class="links_text_subtitle">
+                <h5 id="text1" class="links_text_subtitle">
                     Hvaing placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum”
                 </h5>
-                <h5 class="links_text_subtitle">
+                <h5 id="text2" class="links_text_subtitle">
                     John Doe, Google Inc.
                 </h5>
             </div>
+
+            
             <div class="links_circles">
-                <div class="links_circle-active"></div>
+                <div class="links_circle links_circle-active"></div>
                 <div class="links_circle"></div>
                 <div class="links_circle"></div>
             </div>
+      
+
+
         </div>
     </section>
 
@@ -340,16 +350,29 @@
                         </a>
                     </div>
                 </div>
-                <div class="contact__form-wrap">
-                    <form class="contact__form" method="POST">
-                        <label for="test"></label>
-                        <input id="test" class="contact__input" type="text" />
-                        <input class="contact__input-email" type="email" placeholder="Your E-mail" />
-                        <input class="contact__input-subject" type="text" placeholder="Your subject" />
-                        <input class="contact__input-name" type="text" placeholder="Company name" />
-                        <textarea class="contact__input-area" placeholder="Write your message"></textarea>
-                        <input class="contact__submit" type="submit" value="Send message" />
+
+            <div>
+                
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p id="successMessage">Ваша заявка успешно отправлена.</p>
+                    </div>
+                  </div>
+                
+                  <div class="contact__form-wrap">
+                    <form id="contactForm" class="contact__form" method="POST">
+                      <label for="test"></label>
+                      <input id="test" class="contact__input" type="text" placeholder="Your Name"/>
+                      <input id="email" class="contact__input-email" type="email" placeholder="Your E-mail" />
+                      <span class="error-message" id="emailError"></span>
+                      <input id="subject" class="contact__input-subject" type="text" placeholder="Your subject" />
+                      <input id="company" class="contact__input-name" type="text" placeholder="Company name" />
+                      <textarea id="message" class="contact__input-area" placeholder="Write your message"></textarea>
+                      <input id="submit" class="contact__submit" type="submit" value="Send message" />
                     </form>
+                  </div>
+
                 </div>
 
             </div>

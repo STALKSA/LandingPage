@@ -82,7 +82,7 @@ $(document).ready(function() {
     let currentIndex = 0;
     
     function updateText() {
-        var currentText = texts[currentIndex];
+        let currentText = texts[currentIndex];
         $("#text1").text(currentText.title);
         $("#text2").text(currentText.subtitle);
     }
@@ -100,6 +100,22 @@ $(document).ready(function() {
     
     updateText();
     updateActiveCircle();
+
+
+
+
+  // Открытие модального окна при нажатии на картинку
+  $('.team-member img').click(function() {
+    let modal = $(this).siblings('.modal');
+    modal.show();
+  });
+
+  // Закрытие модального окна при нажатии на кнопку "Close"
+  $('.modal-close').click(function() {
+    let modal = $(this).closest('.modal');
+    modal.hide();
+  });
+
 
 
   });
